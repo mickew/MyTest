@@ -1,4 +1,4 @@
 MyTest
 ======
 
-Just a test
+Just My test
