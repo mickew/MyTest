@@ -5,6 +5,11 @@ on:
 #    - '*'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      environment_tag:
+        description: 'Enter Tag'     
+        required: true
+        default: 'v0.0.0'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,5 +27,5 @@ jobs:
         artifacts: "release.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         commit: ${{ github.sha }}
-        tag: "v0.0.1"
+        tag: "${{ github.event.inputs.environment_tag }}"
         
