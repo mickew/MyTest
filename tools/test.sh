@@ -192,18 +192,15 @@ do
             ;;
         "1)")   
             log "User selected Install."
-            install
         ;;
         "2)")   
             log "User selected Update."
-            update
         ;;
 
         "3)")   
             log "User selected Uninstall."
             if whiptail --title "$application_name - Uninstall" --yesno "Do you realy want to uninstall" 8 78; then
                 log "User selected Yes."
-                remove
             else
                 log "User selected No."
             fi
